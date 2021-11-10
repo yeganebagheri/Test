@@ -1,0 +1,44 @@
+﻿@model Test.Models.User
+@{
+    ViewData["Title"] = "Prof";
+}
+
+<h1>Prof</h1>
+
+<table class="table table-bordered table-striped" style="width:100%">
+<thead>
+    <tr>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            Degree
+        </th>
+        <th>
+            Address
+        </th>
+
+
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+    @*@{
+            var data = ViewBag.Message;
+        }*@
+
+    <tr>
+        <td width="30%" class="border-10">@Model.FirstName</td>
+        <td width="10%">@Model.LastName</td>
+        <td width="20%">@Model.Degree</td>
+        <td width="20%">@Model.Address</td>
+
+
+
+    </tr>
+
+</tbody>
+</table>

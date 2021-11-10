@@ -1,0 +1,66 @@
+﻿@model Test.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+@*<h1>Login</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Pass" class="control-label"></label>
+                <input asp-for="Pass" class="form-control" />
+                <span asp-validation-for="Pass" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="NationalCode" class="control-label"></label>
+                <input asp-for="NationalCode" class="form-control" />
+                <span asp-validation-for="NationalCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+
+                <input type="submit" value="Login" class="btn btn-dark form-control btn-sm p-2" style="height:40px" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+<div>
+    <a asp-controller="Complaint" asp-action="Index">Back to List</a>
+</div>
+
+<div class="container" style="background-color:lightblue; padding: 20px 40px; border-radius: 5px;">
+    <h1 style=" text-align: center; margin-bottom: 30px;">Please Login</h1>
+    <form>
+
+       
+        <div class="form-group" style="  margin: 20px 0 40px; width: 300px;">
+            <label class="control-label" asp-for="Pass" style=" top: 1px; left: 0; pointer-events: none;">Password</label>
+            <input asp-for="Pass" style="background-color: transparent; border: 0; border-bottom: 2px #fff solid; display: block; width: 100%; padding: 15px 0; font-size: 18px; color: #fff;" required />
+            <span asp-validation-for="Pass" style="display: inline-block; font-size: 18px; min-width: 5px; transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);"></span>
+        </div>
+
+        <div style=" margin: 20px 0 40px; width: 300px;">
+            <label asp-for="NationalCode" style=" top: 1px; left: 0; pointer-events: none;">National Code</label>
+            <input asp-for="NationalCode" style="background-color: transparent; border: 0; border-bottom: 2px #fff solid; display: block; width: 100%; padding: 15px 0; font-size: 18px; color: #fff;" required>
+            <span asp-validation-for="NationalCode" style="display: inline-block; font-size: 18px; min-width: 5px; transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);"></span>
+        </div>
+         
+        <button type="submit" value="Login" style=" cursor: pointer; display: flex; align-items:center ; margin:0 auto;  width: 70%; background-color:darkcyan ; padding: 15px; font-family: inherit; font-size: 16px; border: 0; border-radius: 5px;">Login</button>
+
+
+    </form>
+</div>
+
+@section Scripts {
+   
+}
